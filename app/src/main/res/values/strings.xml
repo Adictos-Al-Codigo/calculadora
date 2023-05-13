@@ -13,12 +13,14 @@
     <string name="btn_7">7</string>
     <string name="btn_8">8</string>
     <string name="btn_9">9</string>
+    <string name="btn_0">0</string>
 
     <!-- Operaciones -->
 
     <string name="suma">+</string>
     <string name="restar">-</string>
-    <string name="multiplicacion">*</string>
+    <string name="multiplicacion">x</string>
     <string name="division">/</string>
-    <string name="borrar">x</string>
+    <string name="borrar">c</string>
+    <string name="igual">=</string>
 </resources>

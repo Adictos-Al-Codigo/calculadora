@@ -34,6 +34,7 @@
             android:layout_height="40dp"
             android:ems="10"
             android:inputType="text"
+            android:gravity="right"
             android:text=""
             android:background="#708B5A"
             />
@@ -278,7 +279,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="horizontal"
-                    android:layout_marginEnd="190dp"
+                    android:layout_marginEnd="5dp"
                     android:layout_marginRight="5dp">
 
                     <Button
@@ -286,6 +287,42 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/borrar"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <Button
+                        android:id="@+id/btn_cero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btn_0"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <Button
+                        android:id="@+id/btn_igual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/igual"
                         android:textStyle="bold"
                         android:textSize="20dp"
                         />
