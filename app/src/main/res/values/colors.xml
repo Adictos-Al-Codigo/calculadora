@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <color name="seed">#6750A4</color>
+     <color name="seed">#6750A4</color>
     <color name="md_theme_light_primary">#6750A4</color>
     <color name="md_theme_light_onPrimary">#FFFFFF</color>
     <color name="md_theme_light_primaryContainer">#EADDFF</color>
@@ -62,4 +62,9 @@
     <color name="md_theme_dark_surfaceTint">#D0BCFF</color>
     <color name="md_theme_dark_outlineVariant">#49454F</color>
     <color name="md_theme_dark_scrim">#000000</color>
+
+    <style name="Button.Transparent" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:background">@drawable/boton_personalizado</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
 </resources>
