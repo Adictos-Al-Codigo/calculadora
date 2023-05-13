@@ -12,10 +12,12 @@ public class MainActivity extends AppCompatActivity {
 
     EditText editText;
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0;
-    Button btnSumar, btnRestar, btnMultiplicar, btnDividir, btnIgual, btnBorrar;
+    Button btnSumar, btnRestar, btnMultiplicar, btnDividir, btnIgual, btnBorrar, btnComa;
 
     double numero1, numero2;
     String operacion;
+
+    boolean comaPresionada = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btnDividir = findViewById(R.id.btn_dividir);
         btnIgual = findViewById(R.id.btn_igual);
         btnBorrar = findViewById(R.id.btn_borrar);
+        btnComa = findViewById(R.id.btn_coma);
 
         btn1.setOnClickListener(v -> editText.append("1"));
 
@@ -62,11 +65,21 @@ public class MainActivity extends AppCompatActivity {
 
         btn0.setOnClickListener(v -> editText.append("0"));
 
+        btnComa.setOnClickListener(v ->
+        {
+            editText.append(",");
+            comaPresionada = true;
+        });
+
 
         btnSumar.setOnClickListener(v -> {
             operacion = "suma";
             String input = editText.getText().toString();
             if (!input.isEmpty()) {
+                if (comaPresionada) {
+                    input = input.replace(",", ".");
+                    comaPresionada = false;
+                }
                 numero1 = Double.parseDouble(input);
                 editText.getText().clear();
             }
@@ -76,6 +89,10 @@ public class MainActivity extends AppCompatActivity {
             operacion = "resta";
             String input = editText.getText().toString();
             if (!input.isEmpty()) {
+                if (comaPresionada) {
+                    input = input.replace(",", ".");
+                    comaPresionada = false;
+                }
                 numero1 = Double.parseDouble(input);
                 editText.getText().clear();
             }
@@ -85,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
             operacion = "multiplicacion";
             String input = editText.getText().toString();
             if (!input.isEmpty()){
+                if (comaPresionada) {
+                    input = input.replace(",", ".");
+                    comaPresionada = false;
+                }
                 numero1 = Double.parseDouble(input);
                 editText.getText().clear();
             }
@@ -94,6 +115,10 @@ public class MainActivity extends AppCompatActivity {
             operacion = "division";
             String input = editText.getText().toString();
             if (!input.isEmpty()){
+                if (comaPresionada) {
+                    input = input.replace(",", ".");
+                    comaPresionada = false;
+                }
                 numero1 = Double.parseDouble(input);
                 editText.getText().clear();
             }
@@ -102,6 +127,10 @@ public class MainActivity extends AppCompatActivity {
         btnIgual.setOnClickListener(v -> {
             String input = editText.getText().toString();
             if (!input.isEmpty()) {
+                if (comaPresionada) {
+                    input = input.replace(",", ".");
+                }
+
                 numero2 = Double.parseDouble(input);
 
                 switch (operacion) {
